@@ -6,9 +6,9 @@ const Footer = () => {
       <Link href='/'>
         <h1 className='text-xl md:text-3xl font-bold text-blue-400'>Rick and Morty</h1>
       </Link>
-      <p className='ml-auto text-sm md:text-lg'>
-        Made with <span className='heart'>❤</span> by{' '}
-        <a href='https://portfolio-ffreeman.vercel.app/' target='_blank' rel='noopener noreferrer'>
+      <p className='ml-auto text-sm md:text-lg text-white'>
+        Made with <span className='text-white'>❤</span> by{' '}
+        <a className='text-blue-500' href='https://portfolio-ffreeman.vercel.app/' target='_blank' rel='noopener noreferrer'>
           @ffreeman
         </a>
       </p>
