@@ -25,7 +25,7 @@ const Paginations = ({ pages, currentPage }: Props) => {
           {'>'}
         </Link>
       </ul>
-      <div className='flex flex-col w-full'>
+      <div className='flex flex-col w-full items-center justify-center'>
         <div className='flex md:hidden'>
         <Link href={`/?page=${currentPage > 1 ? currentPage - 1 : 1}`} className='flex justify-center items-center px-4 cursor-pointer  text-blue-400'>{'< Prev'}</Link>
         <Link href={`/?page=${currentPage < totalPage ? currentPage + 1 : totalPage}`} className='flex justify-center items-center px-4 cursor-pointer text-blue-400'>
