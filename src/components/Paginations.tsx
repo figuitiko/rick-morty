@@ -7,7 +7,7 @@ interface Props {
 
 const Paginations = ({ pages, currentPage }: Props) => {
   const totalPage = pages.length
-  const itemsToShow = currentPage < 10 ? pages.slice(0, 5) : pages.slice(currentPage - 5, currentPage + 5)
+  const itemsToShow = currentPage < 10 ? pages.slice(0, 10) : pages.slice(currentPage - 5, currentPage + 5)
   return (
     <nav aria-label='Page navigation example' className='flex flex-col gap-4 items-center justify-center'>
       <ul className=' -space-x-px text-sm flex-wrap hidden md:inline-flex'>
