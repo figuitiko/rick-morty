@@ -33,7 +33,7 @@ const Paginations = ({ pages, currentPage }: Props) => {
         </Link>
         </div>
         <span className='px-4 py-2 text-sm text-gray-700 dark:text-gray-400'>
-         <Link className='text-blue-500' href={`/?page=${1}`}>{currentPage === 1 ? '' : 'One'}</Link> to {currentPage} { currentPage !== totalPage && 'of' } <Link className='text-blue-500' href={`/?page=${totalPage}`}>{totalPage === currentPage ? '' : totalPage}</Link>
+         <Link className='text-blue-500' href={`/?page=${1}`}>{currentPage === 1 ? '' : 'One'}</Link> {currentPage !== 1 && 'to'} {currentPage} { currentPage !== totalPage && 'of' } <Link className='text-blue-500' href={`/?page=${totalPage}`}>{totalPage === currentPage ? '' : totalPage}</Link>
         </span>
       </div>
     </nav>
