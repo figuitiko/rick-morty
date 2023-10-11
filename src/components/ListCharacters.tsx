@@ -15,10 +15,11 @@ type ItemPropType = Pick<CharacterProps, 'image' | 'name'>
 
 export const CharacterBox = ({ image, name }: ItemPropType) => {
   return (
-    <div className='flex flex-col w-full sm:w-1/2 md:w-1/4  lg:w-1/5'>
+    <div className='flex flex-col w-full sm:w-1/2 md:w-1/4  lg:w-1/5 '>
       <picture>
         <source type='image/jpeg' srcSet={`${image}?width=100 100w`} />
         <img
+         className='rounded-lg shadow-lg'
           role='presentation'
           loading='lazy'
           src={image}
