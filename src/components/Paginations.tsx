@@ -9,7 +9,7 @@ const Paginations = ({ pages, currentPage }: Props) => {
   const totalPage = pages.length
   const itemsToShow = currentPage < 10 ? pages.slice(0, 10) : pages.slice(currentPage - 5, currentPage + 5)
   return (
-    <nav aria-label='Page navigation example' className='flex flex-col gap-4 items-center justify-center'>
+    <nav aria-label='Page navigation example' className='flex flex-col gap-4 items-center justify-center mt-8'>
       <ul className=' -space-x-px text-sm flex-wrap hidden md:inline-flex'>
         <Link href={`/?page=${currentPage > 1 ? currentPage - 1 : 1}`} className='flex justify-center items-center px-4 cursor-pointer  text-blue-400'>{'<'}</Link>
         {
@@ -25,7 +25,7 @@ const Paginations = ({ pages, currentPage }: Props) => {
           {'>'}
         </Link>
       </ul>
-      <div className='flex flex-col'>
+      <div className='flex flex-col w-full'>
         <div className='flex md:hidden'>
         <Link href={`/?page=${currentPage > 1 ? currentPage - 1 : 1}`} className='flex justify-center items-center px-4 cursor-pointer  text-blue-400'>{'< Prev'}</Link>
         <Link href={`/?page=${currentPage < totalPage ? currentPage + 1 : totalPage}`} className='flex justify-center items-center px-4 cursor-pointer text-blue-400'>

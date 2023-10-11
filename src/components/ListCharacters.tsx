@@ -34,6 +34,7 @@ export const CharacterBox = ({ image, name }: ItemPropType) => {
 }
 export const ListCharacters = ({ characters, pages, currentPage }: ListProps) => {
   return (
+    <>
     <div className='flex gap-4 flex-wrap m-auto items-center w-full justify-center'>
       {
         characters.map((character) => {
@@ -41,7 +42,8 @@ export const ListCharacters = ({ characters, pages, currentPage }: ListProps) =>
           return <CharacterBox key={id} image={image} name={name} />
         })
       }
-      <Paginations pages={pages} currentPage={currentPage} />
     </div>
+      <Paginations pages={pages} currentPage={currentPage} />
+    </>
   )
 }
