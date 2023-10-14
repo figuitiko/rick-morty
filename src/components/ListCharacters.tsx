@@ -13,7 +13,7 @@ export const ListCharacters = ({ characters, pages, currentPage }: ListProps) =>
       {
         characters.map((character) => {
           const { id, image, name } = character
-          return <CharacterBox key={id} image={image} name={name} />
+          return <CharacterBox key={id} image={image} name={name} id={id} />
         })
       }
     </div>

@@ -6,8 +6,9 @@ interface Props {
   children: React.ReactNode
   isOpen: boolean
   onClose?: () => void
+  id: string
 }
-const Modal = ({ children, isOpen, onClose }: Props) => {
+const Modal = ({ children, isOpen, onClose, id }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const modalRef = useRef<HTMLDialogElement | null>(null)
   useEffect(() => {
@@ -56,7 +57,7 @@ const Modal = ({ children, isOpen, onClose }: Props) => {
 
   return (
     <>
-      <dialog className='relative overflow-hidden'
+      <dialog style={{ viewTransitionName: `card-${id}` }} className='relative overflow-hidden'
         ref={modalRef}
         open={isModalOpen}
         onKeyDown={handleKeyDown}

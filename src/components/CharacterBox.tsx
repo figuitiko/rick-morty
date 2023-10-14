@@ -1,19 +1,25 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 'use client'
 
 import { useState } from 'react'
 import ModalThumbNails from './ModalThumbNails'
+import { flushSync } from 'react-dom'
 
 export interface CharacterProps {
-  id: number
+  id: string
   image: string
   name: string
 }
-type ItemPropType = Pick<CharacterProps, 'image' | 'name'>
 
-const CharacterBox = ({ image, name }: ItemPropType) => {
+const CharacterBox = ({ image, name, id }: CharacterProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const handleIsOpen = () => {
-    setIsOpen(true)
+    // @ts-expect-error
+    document.startViewTransition(() => {
+      flushSync(() => {
+        setIsOpen(true)
+      })
+    })
   }
   const handleClose = () => {
     setIsOpen(false)
@@ -37,7 +43,7 @@ const CharacterBox = ({ image, name }: ItemPropType) => {
         <p>{name}</p>
         {
         isOpen &&
-        <ModalThumbNails isOpen={isOpen} pitureUrl={image} onClose={handleClose} />
+        <ModalThumbNails id = {id} isOpen={isOpen} pitureUrl={image} onClose={handleClose} />
         }
       </div>
     </>

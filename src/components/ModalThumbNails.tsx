@@ -5,11 +5,12 @@ interface Props {
   isOpen: boolean
   onClose?: () => void
   pitureUrl: string
+  id: string
 }
 
-const ModalThumbNails = ({ isOpen, pitureUrl, onClose }: Props) => {
+const ModalThumbNails = ({ isOpen, pitureUrl, onClose, id }: Props) => {
   return (
-   <Modal isOpen={isOpen} onClose={onClose}>
+   <Modal id={id} isOpen={isOpen} onClose={onClose}>
     <picture>
       <Image src={pitureUrl} alt='image' width={500} height={500} />
     </picture>
