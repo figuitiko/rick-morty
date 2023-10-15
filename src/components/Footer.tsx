@@ -8,7 +8,7 @@ const Footer = () => {
       </Link>
       <p className='ml-auto text-sm md:text-lg text-white'>
         Made with <span className='text-white'>❤</span> by{' '}
-        <a className='text-blue-500' href='https://portfolio-ffreeman.vercel.app/' target='_blank' rel='noopener noreferrer'>
+        <a className='text-blue-500' href='#' target='_blank' rel='noopener noreferrer'>
           @ffreeman
         </a>
       </p>
